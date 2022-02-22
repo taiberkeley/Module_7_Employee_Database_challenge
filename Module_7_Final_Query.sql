@@ -182,3 +182,11 @@ SELECT * FROM mentorship_eligibilty_expanded;
 
 SELECT COUNT(emp_no)
 FROM mentorship_eligibilty_expanded;
+
+SELECT COUNT(title), title
+INTO mentorship_titles
+FROM mentorship_eligibilty_expanded
+GROUP BY title
+ORDER BY count DESC;
+
+SELECT * FROM mentorship_titles;
